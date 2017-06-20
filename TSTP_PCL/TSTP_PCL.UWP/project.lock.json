@@ -25898,6 +25898,7 @@
   "projectFileDependencyGroups": {
     "": [
       "Microsoft.Azure.Mobile.Client >= 3.1.0",
+      "Microsoft.CSharp >= 4.3.0",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.2.2",
       "Newtonsoft.Json >= 10.0.3",
       "Prism.Core >= 6.3.0",
@@ -25933,6 +25934,7 @@
     },
     "dependencies": {
       "Microsoft.Azure.Mobile.Client": "3.1.0",
+      "Microsoft.CSharp": "4.3.0",
       "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
       "Newtonsoft.Json": "10.0.3",
       "Prism.Core": "6.3.0",
