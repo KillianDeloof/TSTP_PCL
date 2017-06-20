@@ -1,0 +1,4 @@
+C:\Users\killi\Desktop\Git\TSTP_PCL\TSTP_PCL\TSTP_PCL.Android\obj\Debug\TSTP_PCL.Android.csprojResolveAssemblyReference.cache
+C:\Users\killi\Desktop\Git\TSTP_PCL\TSTP_PCL\TSTP_PCL.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.Annotations.dll.stamp
+C:\Users\killi\Desktop\Git\TSTP_PCL\TSTP_PCL\TSTP_PCL.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.Compat.dll.stamp
+C:\Users\killi\Desktop\Git\TSTP_PCL\TSTP_PCL\TSTP_PCL.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.CustomTabs.dll.stamp

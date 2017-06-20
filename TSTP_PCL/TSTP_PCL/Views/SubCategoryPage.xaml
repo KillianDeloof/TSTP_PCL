@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TSTP_PCL.Views.SubCategoryPage">
+    <!--<ContentPage.Content>
+        <ListView x:Name="listView"
+                  ItemsSource="{ Binding SubCategoryList }" >
+            -->
+    <!--SelectedItem="{ Binding SelectedSubCategory, Mode=TwoWay }" >-->
+    <!--
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="#eeeeee"
+                                     Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{ Binding SubCategoryUDesc }"
+                                       TextColor="#eeeeee" />
+                                -->
+    <!--<Label Text="{ Binding Subtitle }"
+                                       HorizontalOptions="EndAndExpand"
+                                       TextColor="#212121" />-->
+    <!--
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>-->
+    <!--
+
+    <ListView x:Name="listView"
+                  ItemsSource="{ Binding SubCategoryList }"
+                  SelectedItem="{ Binding SelectedSubCategory, Mode=TwoWay }" 
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand"
+                  IsVisible="true">
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout BackgroundColor="#eeeeee"
+                                    Orientation="Vertical"
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalOptions="FillAndExpand" >
+                        <StackLayout Orientation="Horizontal" Padding="20,0,0,0" MinimumHeightRequest="70"  VerticalOptions="FillAndExpand"
+                                    HorizontalOptions="FillAndExpand">
+                            <Label Text="{ Binding SubCategoryUDesc }"
+                                    TextColor="#212121" 
+                                    HorizontalOptions="FillAndExpand"  VerticalTextAlignment="Center" />
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>-->
+
+
+
+    <ListView x:Name="listViewSubCategory" HasUnevenRows="true" SeparatorVisibility="Default"                        
+                      VerticalOptions="Fill" MinimumHeightRequest="65" HeightRequest="2500"
+                      ItemsSource="{ Binding SubCategoryList }"
+                      SelectedItem="{ Binding SelectedSubCategory, Mode=TwoWay }"
+                      >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.View>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Text="{ Binding SubCategoryUDesc }" HeightRequest="50" FontSize="Medium" VerticalOptions="Center" XAlign="Center"
+                            YAlign="Center" Margin="20,0,0,0"/>
+                        </Grid>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>

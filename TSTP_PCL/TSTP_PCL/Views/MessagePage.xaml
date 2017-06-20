@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TSTP_PCL.ViewModels"
+             x:Class="TSTP_PCL.Views.MessagePage">
+
+    <Grid BackgroundColor="#eeeeee">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="80" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackLayout Margin="15,0,15,0" Grid.Row="0" Grid.Column="0" BackgroundColor="#eeeeee" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Label Text = "Overview" FontSize="Large"/>
+            <Editor Text="{ Binding Subject }" x:Name="Message"/>
+            <Label Text="Category:"/>
+            <Button Text="Category"
+                        Command="{ Binding CategoryCommand }"
+                        x:Name="btnCategory"
+                        BackgroundColor="#44c8f5"
+                        TextColor="White"
+                        BorderRadius="25">
+
+
+            </Button>
+            <Label Text="Location:"/>
+            <Button Text="No location selected"
+                        Command="{ Binding LocationCommand }" 
+                        x:Name="btnLocation"
+                        BackgroundColor="#44c8f5"
+                        TextColor="White"
+                        BorderRadius="25"/>
+
+            <Label Text="Attachment(s):"/>
+
+            <!--LIJST-->
+            <ListView x:Name="listViewCampus" HasUnevenRows="true" SeparatorVisibility="Default"                        
+                      VerticalOptions="Fill" MinimumHeightRequest="50"
+                      ItemsSource="{ Binding PictureNameList }"
+                      SelectedItem="{ Binding SelectedAttachment, Mode=TwoWay }" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+
+                                <Label Text="{ Binding Name }"
+                                       FontSize="Small"
+                                       BackgroundColor="#00FFFFFF"
+                                       HorizontalOptions="FillAndExpand" />
+
+                                <!--<Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Button Grid.Row="0"
+                                            x:Name="BtnRemoveAttachment"
+                                                Grid.Column="0"
+                                                Text="{ Binding Name }"
+                                                FontSize="Small"
+                                                BackgroundColor="#00FFFFFF"
+                                                HorizontalOptions="FillAndExpand"/>
+                                </Grid>-->
+
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <!--EINDE LIJST-->
+
+        </StackLayout>
+
+
+        <Grid Grid.Row="1" VerticalOptions="FillAndExpand" BackgroundColor="#fafafa">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="80" />
+            </Grid.ColumnDefinitions>
+
+
+            <Editor Text="{ Binding Message }" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"  HorizontalOptions="FillAndExpand" >
+            </Editor>
+
+            <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="3">
+                <Image  x:Name="btnPic" Source="ic_photo_camera_black_24dp.png" WidthRequest="40" HeightRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding PictureCommand}" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="btnAttach"  Source="ic_attach_file_black_24dp.png" WidthRequest="40" HeightRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{ Binding AttachCommand }" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Button  x:Name="btnSend" Command="{ Binding SendCommand }" BackgroundColor="#45c8f5" Image="ic_send_white_24px.png" BorderRadius="5" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" WidthRequest="80" HeightRequest="80"/>
+            </StackLayout>
+
+        </Grid>
+    </Grid>
+
+
+</ContentPage>

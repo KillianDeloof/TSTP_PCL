@@ -1,0 +1,10 @@
+C:\Users\killi\Desktop\Git\TSTP_PCL\TSTP_PCL\TSTP_PCL\obj\Debug\TSTP_PCL.csproj.App.config
+C:\Users\killi\Desktop\Git\TSTP_PCL\TSTP_PCL\TSTP_PCL\obj\Debug\TSTP_PCL.csprojResolveAssemblyReference.cache
+C:\Users\killi\Desktop\Git\TSTP_PCL\TSTP_PCL\TSTP_PCL\obj\Debug\TSTP_PCL.MainPage.xaml.g.cs
+C:\Users\killi\Desktop\Git\TSTP_PCL\TSTP_PCL\TSTP_PCL\obj\Debug\TSTP_PCL.App.xaml.g.cs
+C:\Users\killi\Desktop\Git\TSTP_PCL\TSTP_PCL\TSTP_PCL\obj\Debug\TSTP_PCL.Views.LoginPage.xaml.g.cs
+C:\Users\killi\Desktop\Git\TSTP_PCL\TSTP_PCL\TSTP_PCL\obj\Debug\TSTP_PCL.Views.CampusPage.xaml.g.cs
+C:\Users\killi\Desktop\Git\TSTP_PCL\TSTP_PCL\TSTP_PCL\obj\Debug\TSTP_PCL.Views.CategoryPage.xaml.g.cs
+C:\Users\killi\Desktop\Git\TSTP_PCL\TSTP_PCL\TSTP_PCL\obj\Debug\TSTP_PCL.Views.LocationSelectorPage.xaml.g.cs
+C:\Users\killi\Desktop\Git\TSTP_PCL\TSTP_PCL\TSTP_PCL\obj\Debug\TSTP_PCL.Views.MessagePage.xaml.g.cs
+C:\Users\killi\Desktop\Git\TSTP_PCL\TSTP_PCL\TSTP_PCL\obj\Debug\TSTP_PCL.Views.SubCategoryPage.xaml.g.cs

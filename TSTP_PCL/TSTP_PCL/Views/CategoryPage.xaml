@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TSTP_PCL.ViewModels"
+             x:Class="TSTP_PCL.Views.CategoryPage" >
+
+    <StackLayout x:Name="searchbarRegion">
+        <Grid BackgroundColor="#44a8f5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <SearchBar x:Name="searchbar" HorizontalOptions="Fill"                    BackgroundColor="#44c8f5"
+/>
+        </Grid>
+
+
+
+        <ListView x:Name="listViewCategory" HasUnevenRows="true" SeparatorVisibility="Default"                        
+                      VerticalOptions="Fill" MinimumHeightRequest="65" HeightRequest="2500"
+                      ItemsSource="{ Binding CategoryList }"
+                      SelectedItem="{ Binding SelectedCategory, Mode=TwoWay }"
+                      >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="20"/>
+                                </Grid.ColumnDefinitions>
+                                <Image  Margin="10,10,25,10" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" WidthRequest="50" HeightRequest="50" Source = "{Binding Picture}">
+                                </Image>
+                                <Label Grid.Row="1" Grid.Column="2" Text="{ Binding CategoryUDesc }" HeightRequest="50" FontSize="Medium" />
+                            </Grid>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

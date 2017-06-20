@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="TSTP_PCL.UWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TSTP_PCL.UWP"
+    RequestedTheme="Light">
+
+</Application>

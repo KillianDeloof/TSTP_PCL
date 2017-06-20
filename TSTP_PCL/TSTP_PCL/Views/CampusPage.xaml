@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TSTP_PCL.ViewModels"
+             x:Class="TSTP_PCL.Views.CampusPage">
+
+
+    <StackLayout>
+        <!--<BoxView HeightRequest="10" HorizontalOptions="FillAndExpand"/>-->
+
+
+        <ListView x:Name="listViewCampus" HasUnevenRows="true" SeparatorVisibility="Default"                        
+                      VerticalOptions="Fill" MinimumHeightRequest="65" HeightRequest="2500"
+                       ItemsSource="{ Binding CampusList }"
+              SelectedItem="{ Binding SelectedCampus, Mode=TwoWay }">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Grid Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="20"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" WidthRequest="100" HeightRequest="100" Source = "{Binding Picture}">
+                                </Image>
+                                <Label Margin="5,0,0,0" Grid.Row="0" Grid.Column="1" Text="{ Binding UDESC }" FontSize="Medium" />
+                                <Label Margin="5,0,0,0" Grid.Row="1" Grid.Column="1" Text="{ Binding Address }" FontSize="Small" />
+                            </Grid>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+</ContentPage>
