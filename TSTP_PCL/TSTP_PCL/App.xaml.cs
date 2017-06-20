@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using TSTP_PCL.Views;
+using TSTP_PCL.MobileSDK;
+
 using Xamarin.Forms;
 
 namespace TSTP_PCL
@@ -12,9 +15,11 @@ namespace TSTP_PCL
         public App()
         {
             InitializeComponent();
-
-            MainPage = new TSTP_PCL.MainPage();
+            MainPage = new NavigationPage(new LoginPage()) { BarBackgroundColor = Color.FromHex("#44c8f5"), BarTextColor = Color.FromHex("#ec008c") };
+            //MainPage = new TSTP_PCL.MainPage();
         }
+
+        public static IAuthenticate Authenticator { get; private set; }
 
         protected override void OnStart()
         {
@@ -30,5 +35,14 @@ namespace TSTP_PCL
         {
             // Handle when your app resumes
         }
+
+        #region microsoftazuremobileclientsdk
+        public static void Init(IAuthenticate authenticator)
+        {
+            Authenticator = authenticator;
+        }
+
+        #endregion
+
     }
 }
